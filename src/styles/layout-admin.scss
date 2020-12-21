@@ -1,0 +1,950 @@
+.noHighlight{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+nav{
+    background-color: #f5e9b0;
+    z-index: 3;
+
+    justify-content: center;
+
+    width: 100vw;
+
+    font-size: 22px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.heading{
+    padding: 15px 37px 5px 25px;
+    a{
+        font-size: 20px;
+    }
+}
+
+.nav--options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    li{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 5px 0 10px;
+        text-align: center;
+
+        button{
+            font-size: 15px;
+            font-weight: 500;
+            height:inherit ;
+            width:inherit ;
+            background-color:inherit;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.border--bottom{
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #f5b461;
+    bottom: 0;
+}
+
+.main{
+    width: 200%;
+    display: none;
+    position: absolute;
+    padding-top: 130px;
+}
+
+.tab--slide{
+    transform: translateX(100%);
+}
+.page--slide{
+    transform: translateX(-50%);
+}
+
+// .page--transition{
+//     transition: transform .2s cubic-bezier(.14,.96,0,1.03);
+// }
+
+.loading--element{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.transparent--customscrollbar::-webkit-scrollbar{
+    width: 0;   
+}
+
+.main--customscrollbar::-webkit-scrollbar{
+    width: 5px;   
+}
+
+.main--customscrollbar::-webkit-scrollbar-track {
+    background:transparent; 
+}
+
+.main--customscrollbar::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.199); 
+    border-radius:5px;
+}
+
+.main--customscrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.582); 
+}
+
+.patient--deletebutton{
+    transition: background-color .1s ease;
+    background-color: inherit;
+    text-decoration:underline;
+    padding: 0;
+    text-align: start;
+    line-height: .5;
+    border-radius: 5px;
+    padding: 1px 0;
+}
+
+.main--title{
+    font-size: 24px;
+    padding-bottom:15px;
+}
+
+.main--heading{
+    h3{
+        font-size: 18px;
+    }
+}
+.main--body{
+    font-size: 16px;
+    p,pre,input,button{
+        font-size: 16px;
+        // font-family: 'Poppins', sans-serif;
+    }
+    small{
+        font-size: 14px;
+        line-height: 1.3;
+    }
+}
+
+.profile--button{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    // padding:5px 8px;
+    cursor: pointer;
+}
+
+.tab--contents{
+    width: 100%;
+    padding:0 15px;
+}
+
+.tab--containers{
+    background-color: #f3eac2;
+    border-radius: 6px;
+    margin-bottom:33px;
+}
+
+.hometab--containers{
+    padding: 20px;
+}
+
+.hometab--containers:last-child{
+    padding:0;
+    margin-bottom: 20px;
+}
+
+.covidupdate--heading{
+    line-height: 1.3;
+    padding-bottom: 15px;
+}
+
+.covidupdate--date{
+    display: block;
+    font-weight: 400;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.covidupdate--section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+.covidupdate{
+    background-color: white;
+    padding: 10px;
+    line-height: 1.2;
+    border-radius: 5px;
+    height:14.8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.covidupdate--title{
+    font-size: 15px;
+}
+
+.covidupdate--count{
+    font-size: 43px;
+}
+
+.block2 {
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.notes--heading {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.notes{
+    font-size: 14px;
+    border: 1px solid #f5b461;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.addpatientform--container{
+    position: relative;
+    display: none;
+}
+
+.addpatientform--errormessage{
+    display: none;
+    border: 2px solid #ec524b;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.addpatientform{
+    position: absolute;
+    bottom: 55;
+    left: 0;
+    
+    display: flex;
+    flex-direction: column;
+    
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    width:78.7vw;
+    input{
+        margin-bottom:10px ;
+        border: none;
+    }
+    button{
+        // background-color: #bfd8ce;
+        padding: 0;
+        width: 100%;
+    }
+    button:first-child{
+        margin-right:10px;
+    }
+}
+
+.addpatientbutton--container{
+    display: flex;
+}
+
+.covidpatientlist--container>div,.covidpatientlist--container>form{
+    margin-bottom: 15px;
+}
+
+.covidpatientlist>div,.covidpatientlist--title{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.covidpatientlist--title{
+    margin-bottom: 5px;
+    h3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.covidpatientlist--title>div{
+    h3{
+        text-align: start;
+    }
+}
+
+.covidpatientlist{
+    overflow-y: scroll;
+    height: 45vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    input{
+        width: 100%;
+        text-align: center;
+        border: none;
+        background-color:inherit;
+    }
+}
+
+.covidpatientlist>div:last-child{
+    border-bottom: none;
+}
+
+.covidpatientlist>div{
+    border-bottom: 1px solid black;
+    padding: 6px;
+    line-height: 1.2;
+    div p{
+        justify-content: flex-start;
+    }
+}
+
+.covidpatientlist--patientdetails{
+    h3{
+        display: none;
+    }
+    p{
+        display: inline;
+    }
+    p:last-child{
+        margin-left: 7px;
+    }
+}
+
+.nopatient{
+    margin: 10px 0 ;
+}
+
+.patient--submitbutton{
+    margin: 10px 10px 0 0;
+    font-size: 16px;
+    // font-family: 'Poppins', sans-serif;
+}
+
+.history{
+    button{
+        margin-bottom: 25px;
+    }
+}
+.history div:last-child{
+    button{
+        margin-bottom: 5px;
+    }
+}
+
+.history--date {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.history--people{
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: .7fr .3fr .7fr 1.2fr;
+    gap :5px;
+}
+
+.announcement--container{
+    position: relative;
+}
+
+.announcement--loadingelement{
+    display: none;
+    position: absolute;
+    top: 44%;
+    left: 44%;
+
+    img{
+        height: 45px;
+        width: 45px;
+    }
+}
+
+.announcement--heading{
+    border-bottom: 2px solid black;
+}
+
+.announcement--section{
+    height: 67vh;
+    overflow-y: scroll;
+    margin-top: 10px;
+
+    .announcement--post:first-child{
+        margin-top: 0;
+    }
+    .announcement--post{
+        padding: 0 8px;
+        margin: 22px 7px 0;
+        margin-top: 22px;
+        border-left: 1px solid #f5b461;
+    }
+    h3{
+        margin-top: 6px;
+    }
+    pre{
+        line-height: 1.3;
+    }
+    button{
+        margin-bottom: 6px;
+    }
+}
+
+.announcement--element{
+    display: block;
+    margin-bottom: 10px;
+}
+
+// .announcement--element:nth-child(3){
+//     border-bottom: 2px solid #f5b461;
+//     padding-bottom: 11px;
+// }
+
+.map--container{
+    height: 70vh;
+    position: relative;
+  
+}
+
+.map--layer{
+    position: absolute;
+    bottom: 20px;
+    left: 9px;
+    
+    font-size: 13px;
+    z-index: 2;
+    padding:7px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.685);
+}
+
+.ol-attribution li {
+    display: inline;
+    font-size: 11px;
+}
+
+.profile--tab{
+    position: relative;
+}
+
+.profiletab--containers{
+    padding: 15px 10px;
+    h3{
+        margin-bottom: 6px;
+    }
+}
+
+.profile--container{
+    background-color: inherit;
+    border-radius: 0;
+    padding:0 6px;
+    margin-bottom: 15px;
+}
+
+.profile--name{
+    font-size: 19px;
+    margin-bottom: 9px;
+}
+
+.profile--details{
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.profile--options{
+    margin: 60px 0 40px;
+    button{
+        margin-right: 4px;
+    }
+}
+
+.form--element{
+    border-radius: 5px;
+    border: none;
+    padding: 9px 10px;
+    width: 100%;
+}
+
+.editcovidupdate--container{
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 10px;
+        label{
+            display: flex;
+            flex-direction: column;
+            input{
+                padding: 5px 7px;
+            }
+            input, textarea{
+                margin-top: 5px;
+            }   
+        }
+        label:last-of-type{
+            margin-top: 5px;
+            grid-column: 1 /span 2;   
+            textarea{
+                height: 14.2vh;
+            }   
+        }
+        button{
+            margin-top: 10px;
+            width: 70%;
+        }
+    }
+}
+
+.editcovidupdateform--errormessage{
+    display: none;
+    border: 1px solid #ec524b;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.post--container{
+    form{
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            padding:0 5px 5px;
+            font-size: 20px;
+        }
+        textarea{
+            height: 100px;
+        }
+        button{
+            font-size: 15px;
+        }
+    }
+}
+
+.announcementform--element{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 9px 10px;
+}
+.announcementform--element:nth-child(2){
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ec524b;
+    background-color: #FFFFFF;
+    padding:8px;
+}
+.announcementform--element:last-child{
+    margin: 0;
+}
+
+.error-message{
+    display: none;
+}
+.success-message{
+    position: fixed;
+    z-index: 4;
+
+    padding: 10px;
+    border-radius: 5px 7px;
+    background-color: #9ad3bc;
+
+    transition: bottom .2s ease;
+
+    bottom: -45;
+    right: 25;
+}
+
+.overlay{
+    display: none;
+
+    // background-color: #f3eac291;
+    background-color: rgba(0, 0, 0, 0.63);
+    z-index: 5;
+
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top:0;
+    left: 0;
+    
+    width: 100%;
+    height: 100vh;
+}
+.popUp--container{
+    display: grid;
+    grid-template-areas: 
+        "message message"
+        "yes no";
+    gap: 10px;
+
+    background-color: #fff;
+    border-radius: 5px;
+    padding:30px;
+    margin: 0 10px;
+
+    p{
+        margin: 10px 0;
+    }
+
+    button{
+        border: 1px solid #97e0c6;
+        padding: 2px 0;
+    }
+}
+.history--popup{
+    padding: 20px 80px;
+}
+.message{
+    grid-row: 1;
+    grid-column: 1;
+    grid-area: message;
+    text-align: center;
+}
+.yes{
+    grid-row: 2;
+    grid-column: 1;
+    grid-area: yes;
+}
+.no{
+    grid-row: 2;
+    grid-column: 2;
+    grid-area: no;
+}
+
+.orange--button{
+    background-color: #f5b461;
+    transition: background-color .1s ease;
+    font-size: 14px;
+}
+.orange--button:hover{
+    background-color: #dba45c;
+}
+.orange--button:active{
+    background-color: #b37b31;
+}
+
+.blue--button{
+    background-color: #9ad3bc;
+    transition: background-color .1s ease;
+}
+.blue--button:hover{
+    background-color: #72b99d;
+}
+.blue--button:active{
+    background-color: #328162;
+}
+
+@media only screen and (min-width: 348px) {
+    .main{
+        padding-top:115px;
+    }
+}
+
+@media only screen and (min-width: 445px) {
+    .history--people{
+        grid-template-columns: .7fr .3fr .7fr 1.8fr;
+    }    
+}
+
+@media only screen and (min-width: 507px) {
+    .covidupdate {
+        height: 100%;
+    }
+    .covidpatientlist--title > div{
+        h3{
+            text-align: center;
+        }
+    }
+    .covidpatientlist>div{
+        div p{
+            justify-content: center;
+        }
+        div{
+            text-align: center;
+        }
+    }
+    .addpatientform{
+        width: 310px;
+    }
+    .patient--deletebutton{
+        text-align: center;
+        justify-self: center;
+        padding: 1px 10px;
+    }  
+}
+
+@media only screen and (min-width: 598px) {
+    .main{
+        padding-top:95px;
+    }
+}
+
+@media only screen and (min-width: 664px) {
+    nav{
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:680px) {
+    nav{
+        text-align: center;
+    }
+    .covidpatientlist {
+        height: 37vh;
+    }
+    .covidpatientlist--table-grid{
+        display: grid;
+    }
+    .covidpatientlist--table-templatecolumns{
+        grid-template-columns: 1fr 1fr;
+        div{
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+    .covidpatientlist--patientdetails{
+        h3{
+            display: block;
+        }
+    }
+    .covidpatientlist>div,.covidpatientlist--title{
+        grid-template-columns: 2.9fr 1fr 1fr 1fr;
+        h3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .patient--deletebutton:hover{
+        background-color: #9ad3bc;
+    }
+    .patient--deletebutton:active{
+        background-color: #328162;
+    }
+}
+
+@media only screen and (min-width:700px) {
+    .main--title{
+        font-size: 1.4em;
+    }
+    .main--heading{
+        h3{
+            font-size: 1.1em;
+        }
+    }
+    .main--body{
+        p,pre,input,button{
+            font-size: 15.5px;
+        }
+        small{
+            font-size: 13px;
+        }
+    }
+}
+
+@media only screen and (min-width:735px) {
+    .profile--tab{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'userprofile userprofile'
+            'covidupdate postannouncement';
+        gap: 20px;
+        height: 50vh;
+    }
+    .profile--container{
+        grid-row: 1;
+        grid-column: 1;
+        grid-area: userprofile;
+        margin: 0;
+    }
+    .editcovidupdate--container{
+        grid-row: 2;
+        grid-column: 1;
+        grid-area: covidupdate;
+    }
+    .post--container{
+        grid-row: 2;
+        grid-column: 2;
+        grid-area: postannouncement;
+        height: 39vh;
+    }
+    .profile--options{
+        position: absolute;
+        top: 0;
+        right: 25;
+        margin: 0;
+        button{
+            font-size: 15px;
+            z-index: 5;
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .main{
+        position: relative;
+    }
+    .hometab--containers {
+        margin-bottom: 30px;
+    }
+    .block2,.block3{
+        margin-left: 220px;
+    }
+    .covidupdate--container{
+        position: fixed;
+        width: 200px;
+    }
+    .covidupdate--section{
+        overflow-y: scroll;
+        height: 66.5vh;
+    }
+    .announcement--section {
+        height: 72vh;
+    }
+    .map--container{
+        width: unset;
+    }
+    .hometab--containers:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 825px) {
+    .heading a{
+        font-size: unset;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding:0 25px;
+        text-align: start;
+    }
+    .nav--options{
+        margin-right: 23px;
+    }
+    .nav--options li {
+        padding:0;
+        button{
+            font-size: 15px;
+            font-weight: bold;
+            min-width: 70px;
+        }
+    }
+    .heading{
+        padding:15px 0;
+    }
+    .main{
+        padding-top: 70px;
+    }
+    // .page--transition{
+    //     transition: none;
+    // }
+    .covidupdate--section{
+        height: 70vh;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .main{
+        padding-top: 72px;
+    }
+    .heading{
+        width: 70%;
+        flex: 5.9;
+        margin-left: 4px;
+        font-size: 25px;
+    }    
+    // .map--layer{
+    //         font-size: 18px;
+    //         bottom: 15px;
+    //         left: 15px;
+    // }
+    .success-message{
+        right: 30;
+    }
+    .popUp--container{    
+        font-size: 18px;
+        button{
+            font-size: 14px;
+            padding: 4px 0;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1125px) {
+    .block23--container{
+        display: grid;
+        grid-template-columns: 5fr 1.8fr;
+        gap: 20px;
+    }
+    // .block2{
+    //     margin-right: 28.6vw;
+    //     margin-bottom: 20px;
+    // }
+    .block3{
+        // position: fixed;
+        // right: 15;
+        // width: 370px;
+        // width: 27vw;
+        margin-left: 0;
+        // top :72;
+        overflow-y: scroll;
+        height: 86vh;
+    }
+    .announcement--section {
+        height: 58vh;
+    }
+    .hometab--containers:last-child{
+        margin-bottom: 0;
+    }
+}

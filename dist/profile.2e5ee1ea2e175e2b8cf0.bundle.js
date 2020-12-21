@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementById("border--bottom"),a=document.getElementById("main"),l=document.getElementById("block3");var s;s="HomeTab",e.className=e.className.replace(" tab--slide",""),a.className=a.className.replace(" page--slide",""),l.style.display="","ProfileTab"==s&&(e.className+=" tab--slide",a.className+=" page--slide",l.style.display="none")})();
